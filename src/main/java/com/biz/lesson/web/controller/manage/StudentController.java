@@ -34,10 +34,10 @@ import java.util.UUID;
 @MultipartConfig
 @RequestMapping("manage/student")
 public class StudentController extends BaseController {
-    private String accessKeyID = "LTAIUh5BN9t52DJ9";
-    private String accessKeySecret = "GaaAaHECMiXIBdxFhPt2pq3bk2y06u";
-    private String bucket = "huangbo-oss";
-    private String endPoint = "oss-cn-shenzhen.aliyuncs.com";
+    private String accessKeyID = "${oss.accessKeyID}";
+    private String accessKeySecret = "${oss.accessKeySecret}";
+    private String bucket = "${oss.bucket}";
+    private String endPoint = "${oss.endPoint}";
 
     @Autowired
     private StudentManager manager;
